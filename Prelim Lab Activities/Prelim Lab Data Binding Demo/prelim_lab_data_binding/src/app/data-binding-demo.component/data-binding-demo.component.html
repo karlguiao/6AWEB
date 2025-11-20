@@ -1,0 +1,19 @@
+<p>{{ message }}</p>
+
+<h2>Property Binding</h2>
+<img src="https://images.seeklogo.com/logo-png/33/2/angular-logo-png_seeklogo-331629.png" [width]="w" [height]="h" [alt]="altText">
+
+<h2>Style Binding</h2>
+<p [style.color]="textColor">This text is blue!</p>
+
+<h2>Class Binding</h2>
+<p [class.highlighted]="isHighlighted">This text is highlighted!</p>
+
+<h2>Two-Way Data Binding</h2>
+<input [(ngModel)]="yourName" placeholder="Enter your name">
+<p>Hello, {{ yourName }}!</p>
+
+<h2>Event Binding</h2>
+<button (click)="increment()">Increment</button>
+<button (click)="decrement()">Decrement</button>
+<p>Count: {{ count }}</p>
