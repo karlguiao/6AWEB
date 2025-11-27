@@ -1,0 +1,126 @@
+/* General Page Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0a1a2f;
+  color: #e0e0e0;
+  margin: 20px;
+  line-height: 1.6;
+}
+
+/* Paragraphs and Headings */
+p, h2 {
+  margin: 0.5rem 0;
+  color: #c5d1ff;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  background-color: #12213b;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+/* Table Head */
+thead th {
+  background-color: #1b2a50;
+  color: #a0c4ff;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Table Body */
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #22345c;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Buttons */
+button {
+  background-color: #2a4d8f;
+  color: #e0e0e0;
+  border: none;
+  padding: 8px 16px;
+  margin: 4px 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #1e3a70;
+}
+
+/* Input Fields */
+input[type="text"] {
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: 1px solid #1b2a50;
+  background-color: #12213b;
+  color: #e0e0e0;
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input[type="text"]::placeholder {
+  color: #8899b5;
+}
+
+/* Lists */
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  padding: 2px 0;
+  color: #b0c4ff;
+}
+
+/* Tables with Conditional Rows (Active / Inactive) */
+td p {
+  padding: 4px 6px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+td p {
+  background-color: #1b2a50;
+  color: #a0c4ff;
+}
+
+td p.active {
+  background-color: #2a5d2a;
+  color: #c5ffc5;
+}
+
+td p.inactive {
+  background-color: #5d2a2a;
+  color: #ffb3b3;
+}
+
+/* Button Table Row */
+tr > td > button {
+  margin-right: 6px;
+}
+
+
+table tbody tr td:nth-child(1),
+table tbody tr td:nth-child(2),
+table tbody tr td:nth-child(3) {
+  color: #ffffff;
+}
+
+table tbody tr td:nth-child(4) p {
+  color: #a0c4ff;
+  font-weight: bold;
+}
