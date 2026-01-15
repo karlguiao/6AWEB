@@ -1,0 +1,90 @@
+<div class="date-card">
+  <p class="title">Pipes Demo</p>
+
+  <!-- Parameters in Date -->
+  <div class="date-content">
+    <p>Current date: <span>{{ presentDate | date }}</span></p>
+    <p>Short date: <span>{{ presentDate | date:'shortDate' }}</span></p>
+    <p>Full date: <span>{{ presentDate | date:'fullDate' }}</span></p>
+    <p>Formatted date: <span>{{ presentDate | date:'M/dd/yyyy' }}</span></p>
+    <p>Time: <span>{{ presentDate | date:'h:mm' }}</span></p>
+    <p>Name: <span>Guiao, Karl Christian D.</span></p>
+  </div>
+
+  <!-- Chained Pipes -->
+  <div class="chained-pipe">
+    <p>Date with uppercase: <span>{{ presentDate | date:'fullDate' | uppercase }}</span></p>
+    <p>Date with lowercase: <span>{{ presentDate | date:'medium' | lowercase }}</span></p>
+  </div>
+
+  <!-- Async Pipes -->
+  <div class="async-pipe">
+    <p class="async-label">Live Time (AsyncPipe)</p>
+    <p class="async-time">
+      {{ time$ | async | date:'mediumTime' }}
+    </p>
+  </div>
+
+  <!-- Currency Pipes -->
+  <div class="currency-pipe">
+    <h3>Currency Pipe</h3>
+    <p>{{ price | currency: '':true }}</p>
+    <p>{{ price | currency: 'INR' }}</p>
+  </div>
+
+  <hr/>
+  <!-- Slice Pipes-->
+  <div>
+    <h3>Slice Pipes</h3>
+    <h3>Start index:- {{Fruits | slice:2}}</h3>
+    <h4>Start and end index:- {{Fruits | slice:1:4}}</h4>
+    <h5>Negative index:- {{Fruits | slice:-2}}</h5>
+    <h6>Negative start and end index:- {{Fruits | slice:-4:-2}}</h6>
+  </div>
+
+  <hr/>
+  <!-- Decimal Pipes-->
+  <div>
+    <h3>Decimal Pipe</h3>
+    <p> Apply formatting:- {{decimalNum1 | number:'3.1'}}</p>
+    <p>Apply formatting:- {{decimalNum1 | number:'2.1-4'}}</p>
+  </div>
+
+  <hr/>
+  <!-- Percent Pipes -->
+  <div class="percent-pipe">
+    <h3>Percent Pipes</h3>
+    <p>Currency Conversion Rate (USD → EUR): <span>{{ conversionRate | percent:'1.1-2' }}</span></p>
+    <p>CPU Usage: <span>{{ cpuUsage | percent:'2.1-2' }}</span></p>
+  </div>
+
+  <hr/>
+  <!-- Key Value Pipes -->
+  <div class="keyvalue-pipe">
+    <h3>Key Value Pipes</h3>
+    <span>
+      <p>User Profile (Object)</p>
+      @for (item of userProfile | keyvalue; track item.key) {
+        <div>{{ item.key }}: {{ item.value }}</div>
+      }
+
+      <p>App Settings (Map)</p>
+      @for (item of settings | keyvalue; track item.key) {
+        <div>{{ item.key }}: {{ item.value }}</div>
+      }
+
+      <p>Natural Order (Map)</p>
+      @for (item of settings | keyvalue: null; track item.key) {
+        <div>{{ item.key }}: {{ item.value }}</div>
+      }
+    </span>
+  </div>
+
+  <hr/>
+  <!-- Title Case Pipe -->
+  <div class="titlecase-pipe">
+    <h3>Title Case Pipe</h3>
+    <p>Original: <span>{{ sampleText }}</span></p>
+    <p>Title Case: <span>{{ sampleText | titlecase }}</span></p>
+  </div>
+</div>
