@@ -1,0 +1,97 @@
+/* Contact page container */
+.contact-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Page heading */
+.contact-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Form labels */
+.contact-container label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  color: #ccc;
+}
+
+/* Form inputs */
+.contact-container input,
+.contact-container textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #292929;
+  color: #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #90caf9;
+  box-shadow: 0 0 5px #90caf9;
+}
+
+/* Textarea height */
+.contact-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit button */
+.contact-container button {
+  padding: 0.5rem 1.2rem;
+  background-color: #90caf9;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-container button:hover {
+  background-color: #64b5f6;
+}
+
+/* Form preview */
+.contact-container h3 {
+  margin-top: 2rem;
+  color: #ffffff;
+}
+
+.contact-container p {
+  margin-bottom: 0.75rem;
+  color: #ccc;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .contact-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .contact-container h2 {
+    font-size: 1.75rem;
+  }
+}

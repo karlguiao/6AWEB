@@ -1,0 +1,14 @@
+<div class="services-container">
+  <h2>Services List</h2>
+
+  <input type="text" placeholder="Search services..." [formControl]="searchControl" />
+
+  <ul *ngIf="filteredPosts$ | async as posts">
+    <li *ngFor="let post of posts">
+      <strong>@{{ post.id }} - {{ post.title | uppercase }}</strong><br />
+      <small>{{ post.body | truncate:120 }}</small>
+    </li>
+  </ul>
+
+  <p *ngIf="!(filteredPosts$ | async)?.length">No posts found.</p>
+</div>

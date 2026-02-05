@@ -1,0 +1,52 @@
+/* Container styling */
+.about-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+}
+
+/* Heading styling */
+.about-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Paragraph styling */
+.about-container p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #ccc;
+}
+
+.about-container a {
+  color: #90caf9;
+  text-decoration: none;
+}
+
+.about-container a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive tweak for smaller screens */
+@media (max-width: 600px) {
+  .about-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .about-container h2 {
+    font-size: 1.5rem;
+  }
+}

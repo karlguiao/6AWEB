@@ -1,0 +1,87 @@
+/* Services page container */
+.services-container {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 2rem 2.5rem;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Page heading */
+.services-container h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  border-bottom: 2px solid #333;
+  padding-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+/* Search input */
+.services-container input[type="text"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin: 1rem 0 1.5rem 0;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #292929;
+  color: #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-container input[type="text"]:focus {
+  border-color: #90caf9;
+  box-shadow: 0 0 5px #90caf9;
+}
+
+/* List styling */
+.services-container ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.services-container li {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #292929;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.services-container li:hover {
+  background-color: #333;
+}
+
+/* Strong for title in each post */
+.services-container li strong {
+  color: #90caf9;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* "No posts found" message */
+.services-container p {
+  margin-top: 1rem;
+  font-style: italic;
+  color: #888;
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .services-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .services-container h2 {
+    font-size: 1.75rem;
+  }
+}
