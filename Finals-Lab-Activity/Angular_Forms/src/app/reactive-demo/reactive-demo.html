@@ -1,0 +1,69 @@
+<div class="page">
+  <div class="card">
+    <h2 class="form-header">Reactive Form</h2>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <input class="input" placeholder="Username" formControlName="username" />
+    @if (isInvalid('username')) {
+      <small class="error">Username: 4–12 chars (letters/numbers/_)</small>
+    }
+
+    <input class="input" type="email" placeholder="Email" formControlName="email" />
+    @if (isInvalid('email')) {
+      <small class="error">Enter a valid email</small>
+    }
+
+    <input class="input" type="password" placeholder="Password" formControlName="password" />
+    @if (isInvalid('password')) {
+      <small class="error">Password: 8+ with upper, lower, number</small>
+    }
+
+    <select class="input" formControlName="role">
+      @for (r of roles; track r) {
+        <option [value]="r">{{ r }}</option>
+      }
+    </select>
+
+    <!-- Gender (Radio Buttons) -->
+  <div class="radio-group">
+    <label>Gender:</label>
+    <label>
+      <input
+        type="radio"
+        formControlName="gender"
+        name="gender"
+        value="Male" />
+      Male
+    </label>
+    <label>
+      <input
+        type="radio"
+        formControlName="gender"
+        name="gender"
+        value="Female" />
+      Female
+    </label>
+  </div>
+    @if (isInvalid('gender')) {
+      <small class="error">Please select a gender</small>
+    }
+
+    <!-- Status (Permanent/Probationary) -->
+    <select class="input" formControlName="status">
+      <option value="Permanent">Permanent</option>
+      <option value="Probationary">Probationary</option>
+    </select>
+    @if (isInvalid('status')) {
+      <small class="error">Please select a status</small>
+    }
+
+    <!-- Comments (Notes) -->
+    <textarea class="input" placeholder="Comments" formControlName="comments"></textarea>
+    @if (isInvalid('comments')) {
+      <small class="error">Comments are required</small>
+    }
+
+    <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+  </div>
+</div>

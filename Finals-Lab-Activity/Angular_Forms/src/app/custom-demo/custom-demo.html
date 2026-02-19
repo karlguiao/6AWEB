@@ -1,0 +1,50 @@
+<div class="page">
+  <div class="card">
+    <h2 class="form-header">Ghibli Films Survey</h2>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+      <!-- Name -->
+      <input class="input" placeholder="Your Name" formControlName="name">
+      <small class="error" *ngIf="isInvalid('name')">Name is required (min 3 chars)</small>
+
+      <!-- Email -->
+      <input class="input" type="email" placeholder="Email" formControlName="email">
+      <small class="error" *ngIf="isInvalid('email')">Enter a valid email</small>
+
+      <!-- Favorite Film -->
+      <select class="input" formControlName="favoriteFilm">
+        <option value="" disabled>Select your favorite film</option>
+        <option *ngFor="let film of ghibliFilms" [value]="film">{{ film }}</option>
+      </select>
+      <small class="error" *ngIf="isInvalid('favoriteFilm')">Please select a film</small>
+
+      <!-- Favorite Character -->
+      <input class="input" placeholder="Favorite Character" formControlName="favoriteCharacter">
+      <small class="error" *ngIf="isInvalid('favoriteCharacter')">Required</small>
+
+      <!-- Rating -->
+      <input class="input" type="number" placeholder="Rating (1-5)" formControlName="rating">
+      <small class="error" *ngIf="isInvalid('rating')">Rating must be 1-5</small>
+
+      <!-- Recommend -->
+      <div class="radio-group">
+        <label>Would you recommend this film?</label>
+        <label><input type="radio" formControlName="recommend" name="recommend" value="Yes"> Yes</label>
+        <label><input type="radio" formControlName="recommend" name="recommend" value="No"> No</label>
+        <small class="error" *ngIf="isInvalid('recommend')">Please select an option</small>
+      </div>
+
+      <!-- Comments -->
+      <textarea class="input" placeholder="Additional Comments" formControlName="comments" rows="4"></textarea>
+
+      <button class="btn" type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+
+    <!-- Display JSON data -->
+    <div *ngIf="submittedData" class="submitted">
+      <h3>Form Submitted:</h3>
+      <pre>{{ submittedData | json }}</pre>
+    </div>
+  </div>
+</div>

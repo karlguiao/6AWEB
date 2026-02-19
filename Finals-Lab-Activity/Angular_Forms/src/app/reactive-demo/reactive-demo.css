@@ -1,0 +1,156 @@
+/* Full page container */
+.page {
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Card container */
+.card {
+  background: #111827;
+  padding: 40px 35px;
+  width: 360px;
+  border-radius: 14px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+/* Form header */
+.form-header {
+  color: #f9fafb;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Inputs, selects, textarea */
+.input, select, textarea.input {
+  background-color: #1f2937;
+  border: 1px solid transparent;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  color: #f9fafb;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+.input:focus,
+select:focus,
+textarea.input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3);
+  outline: none;
+}
+
+/* Radio button container */
+.input > label:first-child {
+  font-weight: 600;
+  color: #f9fafb;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.input > label:not(:first-child) {
+  margin-right: 20px;
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  color: #f9fafb;
+}
+
+.input input[type="radio"] {
+  margin-right: 6px;
+  accent-color: #6366f1;
+  vertical-align: middle;
+}
+
+/* Error messages */
+.error {
+  color: #f87171;
+  font-size: 12px;
+  margin-top: -12px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+/* Submit button */
+.btn {
+  background: #6366f1;
+  color: white;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+  width: 100%;
+}
+
+.btn:hover:not(:disabled) {
+  background: #4f46e5;
+}
+
+.btn:disabled {
+  background-color: #4a4f75;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Textarea */
+textarea.input {
+  resize: none;
+  min-height: 80px;
+}
+
+.input, select, textarea.input {
+  box-sizing: border-box;
+  background-color: #1f2937;
+  border: 1px solid transparent;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  color: #f9fafb;
+  width: 100%;
+  font-size: 14px;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+/* Radio group styling */
+.radio-group {
+  color: #f9fafb;
+  margin-bottom: 18px;
+  font-size: 14px;
+}
+
+.radio-group > label:first-child {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #f9fafb;
+}
+
+.radio-group label:not(:first-child) {
+  margin-right: 20px;
+  cursor: pointer;
+  user-select: none;
+  color: #f9fafb;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 6px;
+  accent-color: #6366f1;
+  vertical-align: middle;
+}
+
