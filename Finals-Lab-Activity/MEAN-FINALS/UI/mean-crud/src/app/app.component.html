@@ -1,0 +1,37 @@
+<p>ONE SHOT.</p>
+
+<div class="panel-input">
+  <input id="newAuthor" placeholder="WRITTEN BY...">
+  <input id="newBook" placeholder="THE TITLE IS...">
+  <input id="newDesc" placeholder="THE STORY GOES...">
+  <input id="newGenre" placeholder="THE GENRE...">
+  <input id="newPrice" placeholder="THE COST (₱)">
+  <button class="add-btn" (click)="addBook()">PUBLISH PANEL</button>
+</div>
+
+<div class="manga-grid">
+  @for (book of books; track book.id) {
+    <div class="book-panel">
+      <span class="book-title">{{ book.title }}</span>
+      <span class="book-author">by {{ book.author }}</span>
+
+      <div class="book-desc">{{ book.desc }}</div>
+
+      <div style="font-weight: bold; font-size: 1.2rem;">
+        {{ book.genre }} | ₱{{ book.price }}
+      </div>
+
+      <div class="action-row">
+        <button class="btn-raw btn-edit" (click)="editBook(book)">EDIT</button>
+        <button class="btn-raw btn-save" (click)="updateBook(book.id)">SAVE</button>
+        <button class="btn-raw btn-delete" (click)="deleteBook(book.id)">SCRAP</button>
+      </div>
+    </div>
+  } @empty {
+    <div class="book-panel" style="grid-column: 1 / -1; text-align: center;">
+      <h3>NO STORIES TO TELL YET.</h3>
+    </div>
+  }
+</div>
+
+<router-outlet />
